@@ -1,0 +1,55 @@
+--- apkDecompiled/Settings.apk/res/values/strings.xml.orig	2014-04-16 14:24:56.000000000 +0300
++++ apkDecompiled/Settings.apk/res/values/strings.xml	2014-04-16 14:25:20.000000000 +0300
+@@ -2558,7 +2558,13 @@
+     <string name="sensor_shake_degree_strength">Stong</string>
+     <string name="shake_degree_title">Shake sensitivity</string>
+     <string name="shake_degree_summary">Adjust the sensitivity of swinging the phone</string>
+     <string name="sensor_shake_ok">Ok</string>
+     <string name="sensor_shake_cancel">Cancel</string>
+     <string name="activity_rounded_corner_title">Show screen rounded corner</string>
++    <string name="eng_mode">Engineer Mode</string>
++    <string name="eng_mode_summary">Collecting information / statistics, testing, fine-tuning of various parameters</string>
++    <string name="factory_mode">Factory Mode</string>
++    <string name="factory_mode_summary">Go to factory Mode</string>
++    <string name="level">level</string>
++    <string name="level_summary">level settings</string>
+ </resources>
+--- apkDecompiled/Settings.apk/res/xml/development_prefs.xml.orig	2014-04-16 14:24:54.000000000 +0300
++++ apkDecompiled/Settings.apk/res/xml/development_prefs.xml	2014-04-16 14:25:18.000000000 +0300
+@@ -2,12 +2,18 @@
+ <PreferenceScreen android:title="@string/development_settings_title"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <com.android.settings.BugreportPreference android:title="@android:string/bugreport_title" android:key="bugreport" android:widgetLayout="@null" android:dialogTitle="@android:string/bugreport_title" />
+     <PreferenceScreen android:persistent="false" android:title="@string/local_backup_password_title" android:key="local_backup_password" android:summary="@string/local_backup_password_summary_none">
+         <intent android:targetPackage="com.android.settings" android:action="android.settings.privacy.SET_FULL_BACKUP_PASSWORD" android:targetClass="com.android.settings.SetFullBackupPassword" />
+     </PreferenceScreen>
++    <PreferenceScreen android:title="@string/eng_mode" android:key="engineering_mode" android:summary="@string/eng_mode_summary">
++        <intent android:targetPackage="com.mediatek.engineermode" android:action="android.intent.action.MAIN" android:targetClass="com.mediatek.engineermode.EngineerMode" />
++    </PreferenceScreen>
++    <PreferenceScreen android:title="@string/factory_mode" android:key="factory_mode" android:summary="@string/factory_mode_summary">
++        <intent android:targetPackage="com.agold.AgoldFactoryTest" android:action="android.intent.action.MAIN" android:targetClass="com.agold.AgoldFactoryTest.AgoldFactoryTest" />
++    </PreferenceScreen>
+     <SwitchPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+     <ListPreference android:entries="@array/hdcp_checking_titles" android:title="@string/hdcp_checking_title" android:key="hdcp_checking" android:widgetLayout="@null" android:dialogTitle="@string/hdcp_checking_dialog_title" android:entryValues="@array/hdcp_checking_values" />
+     <SwitchPreference android:title="@string/enforce_read_external_title" android:key="enforce_read_external" android:summary="@string/enforce_read_external_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+     <PreferenceCategory android:title="@string/debug_debugging_category" android:key="debug_debugging_category">
+         <SwitchPreference android:title="@string/enable_adb" android:key="enable_adb" android:summary="@string/enable_adb_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+         <SwitchPreference android:title="@string/bugreport_in_power" android:key="bugreport_in_power" android:summary="@string/bugreport_in_power_summary" />
+--- apkDecompiled/Settings.apk/res/xml/display_settings.xml.orig	2014-04-16 14:24:54.000000000 +0300
++++ apkDecompiled/Settings.apk/res/xml/display_settings.xml	2014-04-16 14:25:16.000000000 +0300
+@@ -5,12 +5,15 @@
+     <PreferenceCategory android:persistent="false" android:title="@string/display_personalize" android:key="display_personalize">
+         <PreferenceScreen android:title="@string/lock_screen_style_title" android:key="lock_screen_style">
+             <intent android:targetPackage="com.android.settings" android:targetClass="com.mediatek.lockscreensettings.LockScreenStyleSettings" />
+         </PreferenceScreen>
+         <SwitchPreference android:title="@string/lock_screen_notifications_title" android:key="lock_screen_notifications" android:summary="@string/lock_screen_notifications_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+         <PreferenceScreen android:title="@string/wallpaper_settings_title" android:key="wallpaper" android:fragment="com.android.settings.WallpaperTypeSettings" />
++        <PreferenceScreen android:title="@string/level" android:key="level" android:summary="@string/level_summary">
++            <intent android:targetPackage="com.zabaanapps.android.level" android:action="android.intent.action.MAIN" android:targetClass="com.zabaanapps.android.level.Level" />
++        </PreferenceScreen>
+     </PreferenceCategory>
+     <PreferenceCategory android:persistent="false" android:title="@string/display_default" android:key="display_default">
+         <SwitchPreference android:title="@string/accelerometer_title" android:key="accelerometer" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+         <com.android.settings.LewaBrightnessPreference android:title="@string/brightness" android:key="brightness" android:widgetLayout="@null" android:dialogTitle="@string/brightness" />
+         <SwitchPreference android:title="@string/nightmode_title" android:key="nightmode" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+         <ListPreference android:persistent="false" android:entries="@array/nightmode_entries" android:title="@string/nightmodecolor_title" android:key="nightmodecolor" android:widgetLayout="@null" android:dialogTitle="@string/nightmode_title" android:entryValues="@array/nightmode_value" />

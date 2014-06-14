@@ -1,0 +1,36 @@
+--- apkDecompiled/SystemUI.apk/res/layout/gemini_status_bar.xml.orig	2014-04-16 14:25:42.000000000 +0300
++++ apkDecompiled/SystemUI.apk/res/layout/gemini_status_bar.xml	2014-04-16 14:26:03.000000000 +0300
+@@ -13,13 +13,13 @@
+         <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/signal_battery_cluster" android:layout_width="wrap_content" android:layout_height="fill_parent">
+             <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/gemini_sim_signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                 <include android:id="@id/signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/gemini_signal_cluster_view" />
+             </LinearLayout>
+             <LinearLayout android:gravity="center_vertical" android:id="@id/battery_all" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                 <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/battery_combo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/status_bar_item_margin">
+-                    <ImageView android:id="@id/battery_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_battery_0" android:contentDescription="@null" />
++                    <ImageView android:id="@id/battery_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_battery_00" android:contentDescription="@null" />
+                     <com.android.systemuiext.utils.PrettyTextView android:textAppearance="@style/TextAppearance.StatusBar.Small" android:id="@id/battery_level" android:paddingTop="@dimen/battery_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                 </RelativeLayout>
+                 <com.android.systemuiext.utils.PrettyTextView android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="center_vertical" android:id="@id/percentage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/status_bar_item_margin" android:layout_marginBottom="@dimen/text_offset" />
+                 <ImageView android:gravity="center_vertical" android:id="@id/battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/status_bar_item_margin" />
+             </LinearLayout>
+         </LinearLayout>
+--- apkDecompiled/SystemUI.apk/res/values/styles.xml.orig	2014-04-16 14:25:43.000000000 +0300
++++ apkDecompiled/SystemUI.apk/res/values/styles.xml	2014-04-16 14:26:06.000000000 +0300
+@@ -25,14 +25,14 @@
+         <item name="android:textStyle">normal</item>
+         <item name="android:textColor">#ffffffff</item>
+         <item name="android:layout_gravity">bottom</item>
+         <item name="android:includeFontPadding">false</item>
+     </style>
+     <style name="TextAppearance.StatusBar.Small" parent="@android:style/TextAppearance.StatusBar.Icon">
+-        <item name="android:textSize">8.0dip</item>
+-        <item name="android:textStyle">normal</item>
++        <item name="android:textSize">12.0dip</item>
++        <item name="android:textStyle">bold</item>
+         <item name="android:textColor">#ffffffff</item>
+     </style>
+     <style name="TextAppearance.StatusBar.Date" parent="@android:style/TextAppearance.StatusBar.Icon">
+         <item name="android:textSize">16.0dip</item>
+         <item name="android:textStyle">normal</item>
+         <item name="android:textColor">@android:color/holo_blue_light</item>

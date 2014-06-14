@@ -1,0 +1,20 @@
+--- apkDecompiled/PIM.apk/smali/com/lewa/PIM/contacts/list/ContactListItemView.smali.orig	2014-04-16 15:04:34.000000000 +0300
++++ apkDecompiled/PIM.apk/smali/com/lewa/PIM/contacts/list/ContactListItemView.smali	2014-04-16 15:06:00.000000000 +0300
+@@ -1422,15 +1422,15 @@
+ 
+     iput-object v0, p0, Lcom/lewa/PIM/contacts/list/ContactListItemView;->mNameTextView:Landroid/widget/TextView;
+ 
+     .line 968
+     iget-object v0, p0, Lcom/lewa/PIM/contacts/list/ContactListItemView;->mNameTextView:Landroid/widget/TextView;
+ 
+-    const/4 v1, 0x1
++    const/4 v1, 0x2
+ 
+-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
++    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
+ 
+     .line 969
+     iget-object v0, p0, Lcom/lewa/PIM/contacts/list/ContactListItemView;->mNameTextView:Landroid/widget/TextView;
+ 
+     invoke-direct {p0}, Lcom/lewa/PIM/contacts/list/ContactListItemView;->getTextEllipsis()Landroid/text/TextUtils$TruncateAt;
+

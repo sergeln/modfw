@@ -1,0 +1,35 @@
+
+--- apkDecompiled/LewaDeskClock.apk/smali/com/android/deskclock/worldclock/WorldClockAdaptor.smali.orig	2014-04-16 14:23:47.000000000 +0300
++++ apkDecompiled/LewaDeskClock.apk/smali/com/android/deskclock/worldclock/WorldClockAdaptor.smali	2014-04-16 14:24:11.000000000 +0300
+@@ -88,13 +88,13 @@
+     .line 45
+     const v1, 0x7f04002c
+ 
+     iput v1, p0, Lcom/android/deskclock/worldclock/WorldClockAdaptor;->mTextViewResourceId:I
+ 
+     .line 46
+-    const-string v1, "Asia/Harbin"
++    const-string v1, "Europe/Minsk"
+ 
+     invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+ 
+     move-result-object v0
+ 
+     .line 47
+--- apkDecompiled/LewaDeskClock.apk/smali/com/android/deskclock/worldclock/WorldClockFragment.smali.orig	2014-04-16 14:23:47.000000000 +0300
++++ apkDecompiled/LewaDeskClock.apk/smali/com/android/deskclock/worldclock/WorldClockFragment.smali	2014-04-16 14:24:11.000000000 +0300
+@@ -923,13 +923,13 @@
+ 
+     move-result-object v5
+ 
+     invoke-virtual/range {v0 .. v5}, Lcom/android/deskclock/LewaAnalogClock;->setDrawable(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+ 
+     .line 107
+-    const-string v0, "Asia/Harbin"
++    const-string v0, "Europe/Minsk"
+ 
+     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+ 
+     move-result-object v10
+ 
+     .line 108
