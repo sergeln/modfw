@@ -14,8 +14,6 @@
     <package name="pro.burgerz.weather" />
     <package name="com.lewa.antitheft" />
     <package name="com.lewa.flashlight" />
-    <package name="com.avast.android.mobilesecurity" />
-    <package name="com.drweb" />
     <package name="com.devexpert.weather" />
     <package name="com.brogent.bgtweather" />
     <package name="com.android.defcontainer" reason="get storage info" />
@@ -28,4 +26,5 @@
     <package name="com.noshufou.android.su" />
     <package name="com.when.android.calendar365" />
     <package name="com.zdworks.android.zdclock" />
+    <package name="org.acestream.engine" />
 </packages>

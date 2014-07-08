@@ -131,15 +131,4 @@
      <integer name="config_networkPolicyDefaultWarning">2048</integer>
      <integer name="config_maxResolverActivityColumns">2</integer>
      <integer name="config_multiuserMaximumUsers">1</integer>
---- frmDecompiled/framework-res.apk/res/xml/power_profile.xml.orig	2014-05-24 23:01:10.000000000 +0300
-+++ frmDecompiled/framework-res.apk/res/xml/power_profile.xml	2014-05-24 23:00:44.000000000 +0300
-@@ -21,8 +21,8 @@
-         <value>400000</value>
-     </array>
-     <item name="cpu.idle">0.1</item>
-     <array name="cpu.active">
-         <value>0.1</value>
-     </array>
--    <item name="battery.capacity">1000</item>
-+    <item name="battery.capacity">2000</item>
- </device>
+

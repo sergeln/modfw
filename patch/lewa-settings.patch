@@ -13,6 +13,11 @@
 +    <string name="factory_mode_summary">Go to factory Mode</string>
 +    <string name="level">level</string>
 +    <string name="level_summary">level settings</string>
++    <string name="cpu_control">CPU Control</string>
++    <string name="cpu_control_summary">Manage CPU frequencies and governor</string>
++    <string name="cpu_stats">CPU Stats</string>
++    <string name="cpu_stats_summary">Monitor CPU usage</string>
++    <string name="cpu_setting_header">System</string>
  </resources>
 --- apkDecompiled/Settings.apk/res/xml/development_prefs.xml.orig	2014-04-16 14:24:54.000000000 +0300
 +++ apkDecompiled/Settings.apk/res/xml/development_prefs.xml	2014-04-16 14:25:18.000000000 +0300
@@ -23,12 +28,20 @@
      <PreferenceScreen android:persistent="false" android:title="@string/local_backup_password_title" android:key="local_backup_password" android:summary="@string/local_backup_password_summary_none">
          <intent android:targetPackage="com.android.settings" android:action="android.settings.privacy.SET_FULL_BACKUP_PASSWORD" android:targetClass="com.android.settings.SetFullBackupPassword" />
      </PreferenceScreen>
-+    <PreferenceScreen android:title="@string/eng_mode" android:key="engineering_mode" android:summary="@string/eng_mode_summary">
-+        <intent android:targetPackage="com.mediatek.engineermode" android:action="android.intent.action.MAIN" android:targetClass="com.mediatek.engineermode.EngineerMode" />
-+    </PreferenceScreen>
-+    <PreferenceScreen android:title="@string/factory_mode" android:key="factory_mode" android:summary="@string/factory_mode_summary">
-+        <intent android:targetPackage="com.agold.AgoldFactoryTest" android:action="android.intent.action.MAIN" android:targetClass="com.agold.AgoldFactoryTest.AgoldFactoryTest" />
-+    </PreferenceScreen>
++    <PreferenceCategory android:title="@string/cpu_setting_header" android:key="cpu_setting_header">
++        <PreferenceScreen android:title="@string/cpu_control" android:key="cpu_control" android:summary="@string/cpu_control_summary">
++            <intent android:targetPackage="it.sineo.android.noFrillsCPUClassic" android:action="android.intent.action.MAIN" android:targetClass="it.sineo.android.noFrillsCPUClassic.activity.MainActivity" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/cpu_stats" android:key="cpu_stats" android:summary="@string/cpu_stats_summary">
++            <intent android:targetPackage="com.bvalosek.cpuspy" android:action="android.intent.action.MAIN" android:targetClass="com.bvalosek.cpuspy.ui.HomeActivity" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/eng_mode" android:key="engineering_mode" android:summary="@string/eng_mode_summary">
++            <intent android:targetPackage="com.mediatek.engineermode" android:action="android.intent.action.MAIN" android:targetClass="com.mediatek.engineermode.EngineerMode" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/factory_mode" android:key="factory_mode" android:summary="@string/factory_mode_summary">
++            <intent android:targetPackage="com.agold.AgoldFactoryTest" android:action="android.intent.action.MAIN" android:targetClass="com.agold.AgoldFactoryTest.AgoldFactoryTest" />
++        </PreferenceScreen>
++    </PreferenceCategory>
      <SwitchPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
      <ListPreference android:entries="@array/hdcp_checking_titles" android:title="@string/hdcp_checking_title" android:key="hdcp_checking" android:widgetLayout="@null" android:dialogTitle="@string/hdcp_checking_dialog_title" android:entryValues="@array/hdcp_checking_values" />
      <SwitchPreference android:title="@string/enforce_read_external_title" android:key="enforce_read_external" android:summary="@string/enforce_read_external_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />

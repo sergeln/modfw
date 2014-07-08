@@ -1,0 +1,12 @@
+--- apkDecompiled/PIM.apk/res/layout/contact_detail_container.xml.orig	2014-07-03 17:07:07.000000000 +0300
++++ apkDecompiled/PIM.apk/res/layout/contact_detail_container.xml	2014-07-03 17:06:00.000000000 +0300
+@@ -2,8 +2,9 @@
+ <com.lewa.PIM.widget.PimLineLayout android:orientation="vertical" android:id="@id/detail_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <com.lewa.PIM.widget.PimViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+     <RelativeLayout android:id="@id/head_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+         <include android:id="@id/tab_carousel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" layout="@layout/contact_detail_tab_carousel" />
+         <com.lewa.PIM.widget.PagerHeader android:id="@id/detail_pager_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/tab_carousel" />
++        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/name" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ContactsDetailActionBarTitleTextStyle" />
+     </RelativeLayout>
+ </com.lewa.PIM.widget.PimLineLayout>

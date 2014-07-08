@@ -1,0 +1,100 @@
+--- apkDecompiled/Settings.apk/res/values/strings.xml.orig	2014-07-03 16:32:42.000000000 +0300
++++ apkDecompiled/Settings.apk/res/values/strings.xml	2014-07-03 16:31:50.000000000 +0300
+
+@@ -2564,7 +2564,12 @@
+     <string name="eng_mode">Engineer Mode</string>
+     <string name="eng_mode_summary">Collecting information / statistics, testing, fine-tuning of various parameters</string>
+     <string name="factory_mode">Factory Mode</string>
+     <string name="factory_mode_summary">Go to factory Mode</string>
+     <string name="level">level</string>
+     <string name="level_summary">level settings</string>
++    <string name="cpu_control">CPU Control</string>
++    <string name="cpu_control_summary">Manage CPU frequencies and governor</string>
++    <string name="cpu_stats">CPU Stats</string>
++    <string name="cpu_stats_summary">Monitor CPU usage</string>
++    <string name="cpu_setting_header">System</string>
+ </resources>
+
+--- apkDecompiled/Settings.apk/res/values-ru/strings.xml.orig	2014-07-03 16:32:42.000000000 +0300
++++ apkDecompiled/Settings.apk/res/values-ru/strings.xml	2014-07-03 16:31:50.000000000 +0300
+@@ -2561,12 +2561,17 @@
+     <string name="eng_mode">Инженерное меню</string>
+     <string name="eng_mode_summary">Сбор информации, статистика, тонкие настройки всевозможных параметров устройства</string>
+     <string name="factory_mode">Заводское меню</string>
+     <string name="factory_mode_summary">Вход в режим заводских настроек и тестирование устройства</string>
+     <string name="level">G-сенсор</string>
+     <string name="level_summary">Калибровка G-сенсора/акселерометра</string>
++    <string name="cpu_control">Управление процессором</string>
++    <string name="cpu_control_summary">Управление частотой и governor процессора</string>
++    <string name="cpu_stats">Статистика CPU</string>
++    <string name="cpu_stats_summary">Монитор загрузки процессора</string>
++    <string name="cpu_setting_header">Система</string>
+     <string name="day">1 день</string>
+     <string name="days">" %s дн."</string>
+     <string name="hour">1 час</string>
+     <string name="hours">%s час.</string>
+     <string name="minute">1 мин.</string>
+     <string name="minutes">" %s мин."</string>
+--- apkDecompiled/Settings.apk/res/xml/development_prefs.xml.orig	2014-07-03 16:32:36.000000000 +0300
++++ apkDecompiled/Settings.apk/res/xml/development_prefs.xml	2014-07-03 16:31:44.000000000 +0300
+@@ -2,18 +2,26 @@
+ <PreferenceScreen android:title="@string/development_settings_title"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <com.android.settings.BugreportPreference android:title="@android:string/bugreport_title" android:key="bugreport" android:widgetLayout="@null" android:dialogTitle="@android:string/bugreport_title" />
+     <PreferenceScreen android:persistent="false" android:title="@string/local_backup_password_title" android:key="local_backup_password" android:summary="@string/local_backup_password_summary_none">
+         <intent android:targetPackage="com.android.settings" android:action="android.settings.privacy.SET_FULL_BACKUP_PASSWORD" android:targetClass="com.android.settings.SetFullBackupPassword" />
+     </PreferenceScreen>
++    <PreferenceCategory android:title="@string/cpu_setting_header" android:key="cpu_setting_header">
++        <PreferenceScreen android:title="@string/cpu_control" android:key="cpu_control" android:summary="@string/cpu_control_summary">
++            <intent android:targetPackage="it.sineo.android.noFrillsCPUClassic" android:action="android.intent.action.MAIN" android:targetClass="it.sineo.android.noFrillsCPUClassic.activity.MainActivity" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/cpu_stats" android:key="cpu_stats" android:summary="@string/cpu_stats_summary">
++            <intent android:targetPackage="com.bvalosek.cpuspy" android:action="android.intent.action.MAIN" android:targetClass="com.bvalosek.cpuspy.ui.HomeActivity" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/eng_mode" android:key="engineering_mode" android:summary="@string/eng_mode_summary">
++            <intent android:targetPackage="com.mediatek.engineermode" android:action="android.intent.action.MAIN" android:targetClass="com.mediatek.engineermode.EngineerMode" />
++        </PreferenceScreen>
++        <PreferenceScreen android:title="@string/factory_mode" android:key="factory_mode" android:summary="@string/factory_mode_summary">
++            <intent android:targetPackage="com.agold.AgoldFactoryTest" android:action="android.intent.action.MAIN" android:targetClass="com.agold.AgoldFactoryTest.AgoldFactoryTest" />
++        </PreferenceScreen>
++    </PreferenceCategory>
+     <SwitchPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+     <ListPreference android:entries="@array/hdcp_checking_titles" android:title="@string/hdcp_checking_title" android:key="hdcp_checking" android:widgetLayout="@null" android:dialogTitle="@string/hdcp_checking_dialog_title" android:entryValues="@array/hdcp_checking_values" />
+     <SwitchPreference android:title="@string/enforce_read_external_title" android:key="enforce_read_external" android:summary="@string/enforce_read_external_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+     <PreferenceCategory android:title="@string/debug_debugging_category" android:key="debug_debugging_category">
+         <SwitchPreference android:title="@string/enable_adb" android:key="enable_adb" android:summary="@string/enable_adb_summary" android:widgetLayout="@lewa:layout/preference_widget_switch_noclickable" />
+         <SwitchPreference android:title="@string/bugreport_in_power" android:key="bugreport_in_power" android:summary="@string/bugreport_in_power_summary" />
+--- apkDecompiled/LewaDeskClock.apk/res/values/strings.xml.orig	2014-07-03 16:33:19.000000000 +0300
++++ apkDecompiled/LewaDeskClock.apk/res/values/strings.xml	2014-07-03 16:33:00.000000000 +0300
+@@ -112,13 +112,13 @@
+     <string name="world_clock_empty_text">Press below button to add clock</string>
+     <string name="add_city">Add city</string>
+     <string name="could_not_add_more_lap_time">Sorry,you can lap 99 numbers most!</string>
+     <string name="menu_actionbar_selected_items">%s selected</string>
+     <string name="menu_multichoice_select_all">Select all</string>
+     <string name="menu_multichoice_clear_select">Unselect all</string>
+-    <string name="time_zh_str">Beijing</string>
++    <string name="time_zh_str">Minsk</string>
+     <string name="early_time">%1$s hours earlier</string>
+     <string name="later_time">%1$s hours later</string>
+     <string name="lab">Lap</string>
+     <string name="left_text">next alarm：</string>
+     <string name="alarm_day">day</string>
+     <string name="alarm_hour">hour</string>
+--- apkDecompiled/LewaDeskClock.apk/res/values-ru/strings.xml.orig	2014-07-03 16:33:19.000000000 +0300
++++ apkDecompiled/LewaDeskClock.apk/res/values-ru/strings.xml	2014-07-03 16:33:00.000000000 +0300
+@@ -112,13 +112,13 @@
+     <string name="world_clock_empty_text">Нажмите кнопку, чтобы добавить часы</string>
+     <string name="add_city">Добавить город</string>
+     <string name="could_not_add_more_lap_time">Извините, максимум 99 записей!</string>
+     <string name="menu_actionbar_selected_items">%s выбрано</string>
+     <string name="menu_multichoice_select_all">Выбрать всё</string>
+     <string name="menu_multichoice_clear_select">Очистить выбранные</string>
+-    <string name="time_zh_str">Шанхай</string>
++    <string name="time_zh_str">Минск</string>
+     <string name="early_time">Меньше на %1$s ч.</string>
+     <string name="later_time">Больше на %1$s ч.</string>
+     <string name="lab">Круг</string>
+     <string name="left_text">Следующий будильник：</string>
+     <string name="alarm_day">дн.</string>
+     <string name="alarm_hour">час.</string>

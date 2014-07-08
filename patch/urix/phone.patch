@@ -1,0 +1,161 @@
+--- apkDecompiled/Phone.apk/res/layout/call_card.xml.orig	2014-07-03 17:04:48.000000000 +0300
++++ apkDecompiled/Phone.apk/res/layout/call_card.xml	2014-07-03 17:04:08.000000000 +0300
+@@ -3,29 +3,29 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:background="@drawable/incall_screen_shadow_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <ImageView android:gravity="top|center" android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/contactPhoto" />
+         <LinearLayout android:orientation="vertical" android:id="@id/call_info_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/call_info_1" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                 <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="100.0dip">
+-                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="30.0sp" android:textColor="@color/incall_call_banner_text_color" android:gravity="center" android:id="@id/name" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true" />
++                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="30.0sp" android:textColor="@color/incall_call_banner_text_color" android:gravity="center" android:id="@id/name" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" android:layout_alignParentTop="true" />
+                     <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/label_num" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+-                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/phoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+-                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+-                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/CarrierAndLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
++                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/phoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" />
++                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="false" />
++                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/CarrierAndLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="false" />
+                     </LinearLayout>
+                     <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/elapsedType" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                     <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:gravity="center" android:id="@id/elapsedTime" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+                 </RelativeLayout>
+-                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:gravity="center" android:id="@id/callStateLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dip" android:singleLine="true" />
++                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:gravity="center" android:id="@id/callStateLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dip" android:singleLine="false" />
+             </LinearLayout>
+             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/call_info_2" android:background="@null" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_alignParentTop="true">
+-                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="30.0sp" android:textColor="@color/incall_call_banner_text_color" android:id="@id/secondaryCallName" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
++                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="30.0sp" android:textColor="@color/incall_call_banner_text_color" android:id="@id/secondaryCallName" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" />
+                 <LinearLayout android:orientation="horizontal" android:id="@id/label_num2" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryPhoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+-                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+-                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryCarrierAndLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
++                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryPhoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" />
++                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="false" />
++                    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryCarrierAndLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="false" />
+                 </LinearLayout>
+-                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryCallStatus" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/onHold" android:singleLine="true" />
++                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textColor="@color/incall_call_banner_text_color_line2" android:id="@id/secondaryCallStatus" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/onHold" android:singleLine="false" />
+             </LinearLayout>
+         </LinearLayout>
+     </RelativeLayout>
+ </com.android.phone.CallCard>
+--- apkDecompiled/Phone.apk/res/layout/lewa_call_card.xml.orig	2014-07-03 17:04:47.000000000 +0300
++++ apkDecompiled/Phone.apk/res/layout/lewa_call_card.xml	2014-07-03 17:04:09.000000000 +0300
+@@ -7,31 +7,31 @@
+             <ImageView android:id="@id/small_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/contactPhoto" />
+             <ImageView android:id="@id/small_photo_shadow" android:layout_width="@dimen/call_card_photo_view_size" android:layout_height="@dimen/call_card_photo_view_size" android:scaleType="centerInside" android:contentDescription="@string/contactPhoto" />
+         </FrameLayout>
+         <LinearLayout android:orientation="vertical" android:id="@id/call_info_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/small_photo_container" android:layout_alignWithParentIfMissing="true">
+             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/call_info_1" android:background="@null" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                 <TextView android:id="@id/name" style="@style/CallCardTextMedium" />
+-                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/label_num" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
++                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/label_num" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                     <TextView android:id="@id/phoneNumber" android:layout_width="wrap_content" style="@style/CallCardTextSmall" />
+                     <TextView android:id="@id/label" android:layout_width="wrap_content" android:layout_marginLeft="5.0dip" style="@style/CallCardTextSmall" />
+                     <TextView android:id="@id/CarrierAndLocation" android:layout_width="wrap_content" android:layout_marginLeft="5.0dip" style="@style/CallCardTextSmall" />
+                 </LinearLayout>
+                 <TextView android:id="@id/elapsedType" android:visibility="gone" style="@style/CallCardTextSmall" />
+                 <TextView android:id="@id/elapsedTime" android:paddingTop="0.0dip" style="@style/CallCardTextSmall" />
+                 <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-                    <TextView android:id="@id/note" android:background="@drawable/dial_yellowpage_bg" style="@style/CallCardTextYellowPage" />
+-                    <TextView android:id="@id/yellow_page" android:background="@drawable/dial_yellowpage_bg" style="@style/CallCardTextYellowPage" />
++                    <TextView android:id="@id/note" android:background="@drawable/dial_yellowpage_bg" android:layout_height="0.0dip" style="@style/CallCardTextYellowPage" />
++                    <TextView android:id="@id/yellow_page" android:background="@drawable/dial_yellowpage_bg" android:layout_height="0.0dip" style="@style/CallCardTextYellowPage" />
+                 </LinearLayout>
+                 <TextView android:id="@id/callStateLabel" android:paddingTop="9.0dip" android:visibility="gone" style="@style/CallCardTextSmall" />
+             </LinearLayout>
+             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/call_info_2" android:background="@null" android:paddingTop="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                 <TextView android:id="@id/secondaryCallName" style="@style/CallCardTextMedium" />
+-                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/label_num2" android:paddingTop="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
++                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/label_num2" android:paddingTop="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                     <TextView android:id="@id/secondaryPhoneNumber" android:layout_width="wrap_content" style="@style/CallCardTextSmall" />
+                     <TextView android:id="@id/secondaryLabel" android:layout_width="wrap_content" android:layout_marginLeft="5.0dip" style="@style/CallCardTextSmall" />
+                     <TextView android:id="@id/secondaryCarrierAndLocation" android:layout_width="wrap_content" android:layout_marginLeft="5.0dip" style="@style/CallCardTextSmall" />
+                 </LinearLayout>
+                 <TextView android:id="@id/secondaryCallStatus" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:text="@string/onHold" style="@style/CallCardTextSmall" />
+             </LinearLayout>
+         </LinearLayout>
+     </RelativeLayout>
+ </LinearLayout>
+--- apkDecompiled/Phone.apk/res/values/styles.xml.orig	2014-07-03 17:04:50.000000000 +0300
++++ apkDecompiled/Phone.apk/res/values/styles.xml	2014-07-03 17:04:11.000000000 +0300
+@@ -248,49 +248,49 @@
+     </style>
+     <style name="CallOptions" parent="@lewa:style/V5.Theme">
+         <item name="android:widgetLayout">@null</item>
+     </style>
+     <style name="CallCardTextMedium">
+         <item name="android:textAppearance">?android:textAppearanceMedium</item>
+-        <item name="android:textSize">27.0sp</item>
++        <item name="android:textSize">24.0sp</item>
+         <item name="android:textColor">@color/incall_call_banner_text_color</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+         <item name="android:layout_height">wrap_content</item>
+-        <item name="android:singleLine">true</item>
+-        <item name="android:shadowColor">#4c000000</item>
+-        <item name="android:shadowDx">1.5</item>
+-        <item name="android:shadowDy">1.5</item>
+-        <item name="android:shadowRadius">4.0</item>
++        <item name="android:singleLine">false</item>
++        <item name="android:shadowColor">#ff101010</item>
++        <item name="android:shadowDx">3.0</item>
++        <item name="android:shadowDy">3.0</item>
++        <item name="android:shadowRadius">6.0</item>
+     </style>
+     <style name="CallCardTextSmall">
+         <item name="android:textAppearance">?android:textAppearanceSmall</item>
+         <item name="android:textSize">18.0sp</item>
+         <item name="android:textColor">@color/incall_call_banner_text_color_line2</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:singleLine">true</item>
+-        <item name="android:shadowColor">#4c000000</item>
+-        <item name="android:shadowDx">1.5</item>
+-        <item name="android:shadowDy">1.5</item>
+-        <item name="android:shadowRadius">4.0</item>
++        <item name="android:shadowColor">#ff101010</item>
++        <item name="android:shadowDx">3.0</item>
++        <item name="android:shadowDy">3.0</item>
++        <item name="android:shadowRadius">6.0</item>
+     </style>
+     <style name="CallCardTextYellowPage">
+         <item name="android:textAppearance">?android:textAppearanceSmall</item>
+         <item name="android:textSize">14.0sp</item>
+         <item name="android:textColor">@color/incall_call_banner_text_color_line2</item>
+         <item name="android:gravity">center</item>
+         <item name="android:paddingLeft">10.0dip</item>
+         <item name="android:paddingRight">10.0dip</item>
+         <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">30.0dip</item>
+         <item name="android:singleLine">true</item>
+-        <item name="android:shadowColor">#4c000000</item>
+-        <item name="android:shadowDx">1.5</item>
+-        <item name="android:shadowDy">1.5</item>
++        <item name="android:shadowColor">#ff101010</item>
++        <item name="android:shadowDx">2.0</item>
++        <item name="android:shadowDy">2.0</item>
+         <item name="android:shadowRadius">4.0</item>
+     </style>
+     <style name="InCallAudioOptions">
+         <item name="android:textSize">12.0sp</item>
+         <item name="android:textColor">#ffffffff</item>
+         <item name="android:gravity">center</item>
+--- apkDecompiled/Phone.apk/smali/com/mediatek/phone/UssdAlertActivity.smali.orig	2014-07-03 17:04:33.000000000 +0300
++++ apkDecompiled/Phone.apk/smali/com/mediatek/phone/UssdAlertActivity.smali	2014-07-03 17:03:48.000000000 +0300
+@@ -443,14 +443,12 @@
+     move-result-object v2
+ 
+     invoke-virtual {v2}, Lcom/android/phone/PhoneGlobals;->getApplicationContext()Landroid/content/Context;
+ 
+     move-result-object v2
+ 
+-    invoke-virtual {p0, v2}, Lcom/mediatek/phone/UssdAlertActivity;->playUSSDTone(Landroid/content/Context;)V
+-
+     .line 76
+     sput-object p0, Lcom/android/phone/PhoneUtils;->mUssdActivity:Lcom/mediatek/phone/UssdAlertActivity;
+ 
+     .line 77
+     invoke-virtual {p0}, Lcom/mediatek/phone/UssdAlertActivity;->setupAlert()V
